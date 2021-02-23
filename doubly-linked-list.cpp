@@ -10,13 +10,7 @@ DoublyLinkedList::DoublyLinkedList()
         :head_(NULL), tail_(NULL), size_(0)
 {
 }
-/*DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& list)
-:size_(list.size_)
-{
-	
 
-
-}*/
 DoublyLinkedList::~DoublyLinkedList()
 {
     Node* current = head_;
