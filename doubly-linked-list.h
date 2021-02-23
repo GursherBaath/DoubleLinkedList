@@ -10,9 +10,7 @@ private:
     // Befriend so tests have access to variables.
 	friend class DoublyLinkedListTest;
  
-    // This type of list can basically grow as large as we want it to,
-    // so we'll just pick an arbitrary large value as the capacity for
-    // all lists of this type.
+    // Arbitrarily large value as the capacity for Doubly Linked List
     static const unsigned int CAPACITY = 65536;
 
     // The node structure used for the DoublyLinkedList.
@@ -23,8 +21,7 @@ private:
         Node* prev;
     };
 
-    // Private method to get the node at an index. This is optional, but you
-    // will probably find it useful.
+    // Private method to get the node at an index.
     Node* getNode(unsigned int index) const;
 
 	// MEMBER VARIABLES
@@ -35,9 +32,9 @@ private:
     // The number of elements in the list.
     unsigned int size_;
     
-    // Copy constructor. Declared private so we don't misuse it.
+    // Copy constructor.
     DoublyLinkedList(const DoublyLinkedList& rhs) {}
-    // Assignment operator. Declared private so we don't misuse it.
+    // Assignment operator.
     DoublyLinkedList& operator=(const DoublyLinkedList& rhs) {}
 
 public:
@@ -66,8 +63,6 @@ public:
     void print() const;
 
 	// MUTATORS
-    // NOTE: all mutators for this class are boolean functions, returning
-    // true if the call succeeds, and false if it fails
     // Inserts a value into the list at a given index.
     bool insert(DataType val, unsigned int index);
     // Inserts a value at the beginning of the list.
